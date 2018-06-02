@@ -4,3 +4,4 @@ class Article < ApplicationRecord
                   length: { minimum: 5 }
   validates :photo, presence: true
 end
+  
