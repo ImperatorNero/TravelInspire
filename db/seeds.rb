@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Article.create!(title: "Nice article", text: "mais qu'il est nice cet article",
+  remote_photo_url: "https://burger-aix.fr/wp-content/uploads/201"
