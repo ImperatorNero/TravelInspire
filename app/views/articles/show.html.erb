@@ -1,13 +1,38 @@
+<% if user_signed_in? %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+	<p>
+	  <strong>Titre:</strong>
+	  <%= @article.title %>
+	</p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+	<p>
+	  <strong>Récit:</strong>
+	  <%= @article.text %>
+	</p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+  <p>
+	  <strong>Destination:</strong>
+	  <%= @article.destination %>
+	</p>
+
+  <p>
+	  <strong>Thème:</strong>
+	  <%= @article.theme %>
+	</p>
+
+  <p>
+	  <strong>Durée:</strong>
+	  <%= @article.duree %>
+	</p>
+
+  <p>
+	  <strong>Budget:</strong>
+	  <%= @article.budget %>
+	</p>
+
+	<%= link_to 'Editer', edit_article_path(@article) %> |
+	<%= link_to 'Retour', articles_path %>
+<% else %>
+    <li><%= link_to("Connexion", new_user_session_path) %></li>
+    <li><%= link_to("Inscription", new_user_registration_path) %></li>
+<% end %>

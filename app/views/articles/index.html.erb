@@ -1,5 +1,6 @@
+<% if user_signed_in? %>
 
-<h1>Listing Articles</h1>
+<h1>Liste des Récits</h1>
 <%= link_to 'New article', new_article_path %>
 <table>
   <tr>
@@ -18,5 +19,9 @@
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  <% end %>
-</table>
+    <% end %>
+  </table>
+<% else %>
+    <li><%= link_to("Connexion", new_user_session_path) %></li>
+    <li><%= link_to("Inscription", new_user_registration_path) %></li>
+<% end %>
