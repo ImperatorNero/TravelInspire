@@ -41,6 +41,19 @@ class ArticlesController < ApplicationController
 
     redirect_to articles_path
   end
+   def favorite(article)
+        favorites.find_or_create_by(article: article)
+   end
+
+   def unfavorite(article)
+     favorites.where(article: article).destroy_all
+
+     article.reload
+   end
+
+   def favorited?(article)
+    favorites.find_by(article_id: article.id).present?
+   end
 
   private
     def article_params
