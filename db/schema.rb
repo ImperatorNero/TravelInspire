@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20180603122534) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.string "destination"
     t.string "theme"
     t.integer "duree"
     t.integer "budget"
-    t.string "photo"
   end
 
   create_table "favorites", force: :cascade do |t|
