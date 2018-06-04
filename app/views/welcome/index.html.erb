@@ -25,8 +25,20 @@
 
 
   <% else %>
-  	<li><%= link_to("Connexion", new_user_session_path) %></li>
-  	<li><%= link_to("Inscription", new_user_registration_path) %></li>
+    <li>
+      <p>Bienvenue ! </p>
+      </br>
+      <li>
+        <%= link_to 'Articles', controller: 'articles' %>
+      </li>
+    </li>
+    </br>
+  	<li>
+      <%= link_to("Connexion", new_user_session_path) %>
+    </li>
+  	<li>
+      <%= link_to("Inscription", new_user_registration_path) %>
+    </li>
   <% end %>
 </ul>
 
