@@ -39,7 +39,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'cloudinary', '~> 1.8', '>= 1.8.3'
 gem 'carrierwave'
 
-gem 'simple_form'
+gem 'simple_form', '~>4.0.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
